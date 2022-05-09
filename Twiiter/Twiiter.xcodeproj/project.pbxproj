@@ -136,7 +136,6 @@
 				3C52551D086C32B93092267A /* Pods-Twiiter.debug.xcconfig */,
 				AD57A811DAC0A1EDBC3C77CB /* Pods-Twiiter.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
