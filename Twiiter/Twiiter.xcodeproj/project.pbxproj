@@ -19,6 +19,11 @@
 		7F14C7092828B0FA00C4A1A7 /* ConversationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F14C7082828B0FA00C4A1A7 /* ConversationsController.swift */; };
 		7F14C70C2828C2AD00C4A1A7 /* NavigationText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F14C70B2828C2AD00C4A1A7 /* NavigationText.swift */; };
 		7F14C70F2828F05800C4A1A7 /* Extensions + viewAutolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F14C70E2828F05800C4A1A7 /* Extensions + viewAutolayout.swift */; };
+		7F14C712282903F700C4A1A7 /* LoginViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F14C711282903F700C4A1A7 /* LoginViewContoller.swift */; };
+		7F14C7142829040D00C4A1A7 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F14C7132829040D00C4A1A7 /* SignUpViewController.swift */; };
+		7F14C7172829095800C4A1A7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F14C7162829095800C4A1A7 /* LoginView.swift */; };
+		7F14C719282916A100C4A1A7 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F14C718282916A100C4A1A7 /* CustomView.swift */; };
+		7F14C71C28291AF600C4A1A7 /* LoginViewText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F14C71B28291AF600C4A1A7 /* LoginViewText.swift */; };
 		D2E3F16746B26D5C0C26F13A /* Pods_Twiiter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF6A12CE2DA26D9573239C74 /* Pods_Twiiter.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +43,11 @@
 		7F14C7082828B0FA00C4A1A7 /* ConversationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsController.swift; sourceTree = "<group>"; };
 		7F14C70B2828C2AD00C4A1A7 /* NavigationText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationText.swift; sourceTree = "<group>"; };
 		7F14C70E2828F05800C4A1A7 /* Extensions + viewAutolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions + viewAutolayout.swift"; sourceTree = "<group>"; };
+		7F14C711282903F700C4A1A7 /* LoginViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewContoller.swift; sourceTree = "<group>"; };
+		7F14C7132829040D00C4A1A7 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		7F14C7162829095800C4A1A7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		7F14C718282916A100C4A1A7 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		7F14C71B28291AF600C4A1A7 /* LoginViewText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewText.swift; sourceTree = "<group>"; };
 		AD57A811DAC0A1EDBC3C77CB /* Pods-Twiiter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twiiter.release.xcconfig"; path = "Target Support Files/Pods-Twiiter/Pods-Twiiter.release.xcconfig"; sourceTree = "<group>"; };
 		BF6A12CE2DA26D9573239C74 /* Pods_Twiiter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Twiiter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -121,6 +131,7 @@
 		7F14C6FC2828A61700C4A1A7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7F14C710282903C300C4A1A7 /* Autheration */,
 				7F14C6FF2828AD6800C4A1A7 /* TabBarController */,
 			);
 			path = Controller;
@@ -129,6 +140,8 @@
 		7F14C6FD2828A62000C4A1A7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7F14C71A2829186600C4A1A7 /* CustomUI */,
+				7F14C7152829093500C4A1A7 /* UIView */,
 				7F14C70A2828C25700C4A1A7 /* Common */,
 				7F14C6EB2828A5EB00C4A1A7 /* Main.storyboard */,
 				7F14C6EE2828A5F000C4A1A7 /* Assets.xcassets */,
@@ -160,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				7F14C70B2828C2AD00C4A1A7 /* NavigationText.swift */,
+				7F14C71B28291AF600C4A1A7 /* LoginViewText.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -170,6 +184,31 @@
 				7F14C70E2828F05800C4A1A7 /* Extensions + viewAutolayout.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		7F14C710282903C300C4A1A7 /* Autheration */ = {
+			isa = PBXGroup;
+			children = (
+				7F14C711282903F700C4A1A7 /* LoginViewContoller.swift */,
+				7F14C7132829040D00C4A1A7 /* SignUpViewController.swift */,
+			);
+			path = Autheration;
+			sourceTree = "<group>";
+		};
+		7F14C7152829093500C4A1A7 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				7F14C7162829095800C4A1A7 /* LoginView.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		7F14C71A2829186600C4A1A7 /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				7F14C718282916A100C4A1A7 /* CustomView.swift */,
+			);
+			path = CustomUI;
 			sourceTree = "<group>";
 		};
 		FA6328232E55AAD7011D0C8B /* Pods */ = {
@@ -297,14 +336,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F14C6E62828A5EB00C4A1A7 /* AppDelegate.swift in Sources */,
+				7F14C712282903F700C4A1A7 /* LoginViewContoller.swift in Sources */,
 				7F14C7092828B0FA00C4A1A7 /* ConversationsController.swift in Sources */,
+				7F14C71C28291AF600C4A1A7 /* LoginViewText.swift in Sources */,
 				7F14C7032828B01700C4A1A7 /* FeedController.swift in Sources */,
 				7F14C7072828B0E200C4A1A7 /* NotificationController.swift in Sources */,
 				7F14C70C2828C2AD00C4A1A7 /* NavigationText.swift in Sources */,
+				7F14C7172829095800C4A1A7 /* LoginView.swift in Sources */,
 				7F14C7012828ADDC00C4A1A7 /* MainTabController.swift in Sources */,
 				7F14C6E82828A5EB00C4A1A7 /* SceneDelegate.swift in Sources */,
 				7F14C70F2828F05800C4A1A7 /* Extensions + viewAutolayout.swift in Sources */,
 				7F14C7052828B0C100C4A1A7 /* ExploreController.swift in Sources */,
+				7F14C7142829040D00C4A1A7 /* SignUpViewController.swift in Sources */,
+				7F14C719282916A100C4A1A7 /* CustomView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
