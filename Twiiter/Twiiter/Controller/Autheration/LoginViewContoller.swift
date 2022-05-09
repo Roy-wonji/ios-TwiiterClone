@@ -22,7 +22,7 @@ final class LoginViewContoller: UIViewController {
         updateUI()
         configureUI()
     }
-
+    
     //MARK:  - UI 관련
     private func updateUI() {
         view.backgroundColor = .twitterBlue
@@ -36,8 +36,10 @@ final class LoginViewContoller: UIViewController {
     }
     
     private func addTarget() {
-        loginView.loginButton.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
-        loginView.dontHaveAccountButton.addTarget(self, action: #selector(handleShowSignUp), for: .touchUpInside)
+        DispatchQueue.main.async {
+            self.loginView.loginButton.addTarget(self, action: #selector(self.handleLogin), for: .touchUpInside)
+            self.loginView.dontHaveAccountButton.addTarget(self, action: #selector(self.handleShowSignUp), for: .touchUpInside)
+        }
     }
     
     //MARK: - Selectors
