@@ -24,11 +24,11 @@ final class RegisterView: UIView {
         
     }
     
-    private lazy var emailTextField = CustomView().textField(withPlaceholder: RegisterViewText.emailTextFieldText).then{ textField in
+     lazy var emailTextField = CustomView().textField(withPlaceholder: RegisterViewText.emailTextFieldText).then{ textField in
         textField.keyboardType = .emailAddress
     }
     
-    private lazy var passwordTextField = CustomView().textField(withPlaceholder: RegisterViewText.passwordTextFieldText).then{ textField in
+     lazy var passwordTextField = CustomView().textField(withPlaceholder: RegisterViewText.passwordTextFieldText).then{ textField in
         textField.isSecureTextEntry = true
     }
     
@@ -41,11 +41,11 @@ final class RegisterView: UIView {
         
     }
     
-    private lazy var fullnameTextField = CustomView().textField(withPlaceholder: RegisterViewText.fullnameTextFieldText).then{ textField in
+     lazy var fullnameTextField = CustomView().textField(withPlaceholder: RegisterViewText.fullnameTextFieldText).then{ textField in
         
     }
     
-    private lazy var usernameTextField = CustomView().textField(withPlaceholder: RegisterViewText.usernameTextFieldText).then{ textField in
+     lazy var usernameTextField = CustomView().textField(withPlaceholder: RegisterViewText.usernameTextFieldText).then{ textField in
         
     }
     
