@@ -20,9 +20,8 @@ final class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
+        configureUI()
     }
-    
-    //MARK: - Selectors
     
     //MARK:  - UI 관련
     private func updateUI() {
@@ -30,6 +29,19 @@ final class RegisterViewController: UIViewController {
     }
     
     private func configureUI() {
+        addTarget()
+    }
+    
+    private func addTarget() {
+        registerView.plusPhotoButton.addTarget(self, action: #selector(handleAddProfilePhoto), for: .touchUpInside)
+        registerView.alreadyHaveAccountButton.addTarget(self, action: #selector(handleShowLogin), for: .touchUpInside)
+    }
+    //MARK: - Selectors
+    @objc func handleAddProfilePhoto() {
         
+    }
+    
+    @objc func handleShowLogin() {
+        navigationController?.popViewController(animated: true)
     }
 }

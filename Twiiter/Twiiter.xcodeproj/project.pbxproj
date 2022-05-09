@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7F06065B28293D1200E0744A /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F06065A28293D1200E0744A /* RegisterView.swift */; };
+		7F06065D282940CA00E0744A /* RegisterViewText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F06065C282940CA00E0744A /* RegisterViewText.swift */; };
 		7F14C6E62828A5EB00C4A1A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F14C6E52828A5EB00C4A1A7 /* AppDelegate.swift */; };
 		7F14C6E82828A5EB00C4A1A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F14C6E72828A5EB00C4A1A7 /* SceneDelegate.swift */; };
 		7F14C6ED2828A5EB00C4A1A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F14C6EB2828A5EB00C4A1A7 /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		3C52551D086C32B93092267A /* Pods-Twiiter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twiiter.debug.xcconfig"; path = "Target Support Files/Pods-Twiiter/Pods-Twiiter.debug.xcconfig"; sourceTree = "<group>"; };
 		7F06065A28293D1200E0744A /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		7F06065C282940CA00E0744A /* RegisterViewText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewText.swift; sourceTree = "<group>"; };
 		7F14C6E22828A5EB00C4A1A7 /* Twiiter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twiiter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F14C6E52828A5EB00C4A1A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F14C6E72828A5EB00C4A1A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 			children = (
 				7F14C70B2828C2AD00C4A1A7 /* NavigationText.swift */,
 				7F14C71B28291AF600C4A1A7 /* LoginViewText.swift */,
+				7F06065C282940CA00E0744A /* RegisterViewText.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				7F14C71C28291AF600C4A1A7 /* LoginViewText.swift in Sources */,
 				7F14C7032828B01700C4A1A7 /* FeedController.swift in Sources */,
 				7F14C7072828B0E200C4A1A7 /* NotificationController.swift in Sources */,
+				7F06065D282940CA00E0744A /* RegisterViewText.swift in Sources */,
 				7F06065B28293D1200E0744A /* RegisterView.swift in Sources */,
 				7F14C70C2828C2AD00C4A1A7 /* NavigationText.swift in Sources */,
 				7F14C7172829095800C4A1A7 /* LoginView.swift in Sources */,
