@@ -11,6 +11,7 @@ final class LoginViewContoller: UIViewController {
     //MARK:  - Properties
     
     private let loginView = LoginView()
+    
     override func loadView() {
         view = loginView
     }
@@ -19,10 +20,9 @@ final class LoginViewContoller: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
+        configureUI()
     }
-    
-    //MARK: - Selectors
-    
+
     //MARK:  - UI 관련
     private func updateUI() {
         view.backgroundColor = .twitterBlue
@@ -32,7 +32,22 @@ final class LoginViewContoller: UIViewController {
     }
     
     private func configureUI() {
+        addTarget()
+    }
+    
+    private func addTarget() {
+        loginView.loginButton.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
+        loginView.dontHaveAccountButton.addTarget(self, action: #selector(handleShowSignUp), for: .touchUpInside)
+    }
+    
+    //MARK: - Selectors
+    @objc func handleShowSignUp() {
+        let registerController = RegisterViewController()
+        navigationController?.pushViewController(registerController, animated: true)
         
     }
     
+    @objc func handleLogin() {
+        print("DEBUG: LoginButton Tapped")
+    }
 }

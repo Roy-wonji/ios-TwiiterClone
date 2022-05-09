@@ -38,7 +38,7 @@ final class LoginView: UIView {
         stack.distribution = .fillEqually
     }
     
-    private lazy var loginButton = UIButton(type: .system).then{ button in
+     lazy var loginButton = UIButton(type: .system).then{ button in
         button.setTitle(LoginViewText.loginButtonText, for: .normal)
         button.setTitleColor(.twitterBlue, for: .normal)
         button.backgroundColor = .white
@@ -46,11 +46,9 @@ final class LoginView: UIView {
         button.clipsToBounds = true
         button.layer.cornerRadius = 10
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
-        button.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
     }
     
-    private  lazy var dontHaveAccountButton = CustomView().attributedButton(fristPart: LoginViewText.attributedTitleText, secondPart: LoginViewText.signupText).then{ button in
-        button.addTarget(self, action: #selector(handleShowSignUp), for: .touchUpInside)
+      lazy var dontHaveAccountButton = CustomView().attributedButton(fristPart: LoginViewText.attributedTitleText, secondPart: LoginViewText.signupText).then{ button in
     }
     
     //MARK: - LifeCycle
@@ -74,14 +72,6 @@ final class LoginView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    //MARK: - Selectors
-    @objc func handleLogin() {
-        print("DEBUG: LoginButton Tapped")
-    }
-    
-    @objc func handleShowSignUp() {
-        print("DEBUG: SignUP button tapped here...")
-    }
     //MARK: - Layout 관련
     override func updateConstraints() {
         setConstraints()

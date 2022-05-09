@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F06065B28293D1200E0744A /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F06065A28293D1200E0744A /* RegisterView.swift */; };
 		7F14C6E62828A5EB00C4A1A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F14C6E52828A5EB00C4A1A7 /* AppDelegate.swift */; };
 		7F14C6E82828A5EB00C4A1A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F14C6E72828A5EB00C4A1A7 /* SceneDelegate.swift */; };
 		7F14C6ED2828A5EB00C4A1A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F14C6EB2828A5EB00C4A1A7 /* Main.storyboard */; };
@@ -20,7 +21,7 @@
 		7F14C70C2828C2AD00C4A1A7 /* NavigationText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F14C70B2828C2AD00C4A1A7 /* NavigationText.swift */; };
 		7F14C70F2828F05800C4A1A7 /* Extensions + viewAutolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F14C70E2828F05800C4A1A7 /* Extensions + viewAutolayout.swift */; };
 		7F14C712282903F700C4A1A7 /* LoginViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F14C711282903F700C4A1A7 /* LoginViewContoller.swift */; };
-		7F14C7142829040D00C4A1A7 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F14C7132829040D00C4A1A7 /* SignUpViewController.swift */; };
+		7F14C7142829040D00C4A1A7 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F14C7132829040D00C4A1A7 /* RegisterViewController.swift */; };
 		7F14C7172829095800C4A1A7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F14C7162829095800C4A1A7 /* LoginView.swift */; };
 		7F14C719282916A100C4A1A7 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F14C718282916A100C4A1A7 /* CustomView.swift */; };
 		7F14C71C28291AF600C4A1A7 /* LoginViewText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F14C71B28291AF600C4A1A7 /* LoginViewText.swift */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		3C52551D086C32B93092267A /* Pods-Twiiter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twiiter.debug.xcconfig"; path = "Target Support Files/Pods-Twiiter/Pods-Twiiter.debug.xcconfig"; sourceTree = "<group>"; };
+		7F06065A28293D1200E0744A /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		7F14C6E22828A5EB00C4A1A7 /* Twiiter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twiiter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F14C6E52828A5EB00C4A1A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F14C6E72828A5EB00C4A1A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,7 +46,7 @@
 		7F14C70B2828C2AD00C4A1A7 /* NavigationText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationText.swift; sourceTree = "<group>"; };
 		7F14C70E2828F05800C4A1A7 /* Extensions + viewAutolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions + viewAutolayout.swift"; sourceTree = "<group>"; };
 		7F14C711282903F700C4A1A7 /* LoginViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewContoller.swift; sourceTree = "<group>"; };
-		7F14C7132829040D00C4A1A7 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		7F14C7132829040D00C4A1A7 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		7F14C7162829095800C4A1A7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		7F14C718282916A100C4A1A7 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		7F14C71B28291AF600C4A1A7 /* LoginViewText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewText.swift; sourceTree = "<group>"; };
@@ -190,7 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				7F14C711282903F700C4A1A7 /* LoginViewContoller.swift */,
-				7F14C7132829040D00C4A1A7 /* SignUpViewController.swift */,
+				7F14C7132829040D00C4A1A7 /* RegisterViewController.swift */,
 			);
 			path = Autheration;
 			sourceTree = "<group>";
@@ -199,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				7F14C7162829095800C4A1A7 /* LoginView.swift */,
+				7F06065A28293D1200E0744A /* RegisterView.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -341,13 +344,14 @@
 				7F14C71C28291AF600C4A1A7 /* LoginViewText.swift in Sources */,
 				7F14C7032828B01700C4A1A7 /* FeedController.swift in Sources */,
 				7F14C7072828B0E200C4A1A7 /* NotificationController.swift in Sources */,
+				7F06065B28293D1200E0744A /* RegisterView.swift in Sources */,
 				7F14C70C2828C2AD00C4A1A7 /* NavigationText.swift in Sources */,
 				7F14C7172829095800C4A1A7 /* LoginView.swift in Sources */,
 				7F14C7012828ADDC00C4A1A7 /* MainTabController.swift in Sources */,
 				7F14C6E82828A5EB00C4A1A7 /* SceneDelegate.swift in Sources */,
 				7F14C70F2828F05800C4A1A7 /* Extensions + viewAutolayout.swift in Sources */,
 				7F14C7052828B0C100C4A1A7 /* ExploreController.swift in Sources */,
-				7F14C7142829040D00C4A1A7 /* SignUpViewController.swift in Sources */,
+				7F14C7142829040D00C4A1A7 /* RegisterViewController.swift in Sources */,
 				7F14C719282916A100C4A1A7 /* CustomView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
