@@ -17,7 +17,7 @@ final class ConversationsController: UIViewController {
     }
     //MARK: - UI관련
     private  func updateUI() {
-      configureUI()
+        configureUI()
     }
     
     private func configureUI() {
@@ -26,7 +26,7 @@ final class ConversationsController: UIViewController {
         
     }
     //MARK: - UI바 설정 관련
-   private func setNavigaionBar() {
-       navigationItem.title = NavigationText.conversationNavigationText
+    private func setNavigaionBar() {
+        navigationItem.title = NavigationText.conversationNavigationText
     }
 }

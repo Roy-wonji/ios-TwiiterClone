@@ -18,7 +18,7 @@ final class ExploreController: UIViewController {
     //MARK: - UI관련
     //MARK: - UI관련
     private  func updateUI() {
-      configureUI()
+        configureUI()
     }
     
     private func configureUI() {
@@ -27,7 +27,7 @@ final class ExploreController: UIViewController {
         
     }
     //MARK: - UI바 설정 관련
-   private func setNavigaionBar() {
-       navigationItem.title = NavigationText.exploreNavigationText
+    private func setNavigaionBar() {
+        navigationItem.title = NavigationText.exploreNavigationText
     }
 }
