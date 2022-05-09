@@ -7,6 +7,7 @@
 
 import UIKit
 import Then
+import AuthenticationServices
 
 final class LoginView: UIView {
     //MARK:  - Properties
@@ -32,11 +33,6 @@ final class LoginView: UIView {
         textField.isSecureTextEntry = true
     }
     
-    private lazy var stackView = UIStackView(arrangedSubviews: [emailContainerView, passwordContainerView, loginButton]).then{ stack in
-        stack.axis = .vertical
-        stack.spacing = 20
-        stack.distribution = .fillEqually
-    }
     
      lazy var loginButton = UIButton(type: .system).then{ button in
         button.setTitle(LoginViewText.loginButtonText, for: .normal)
@@ -50,6 +46,19 @@ final class LoginView: UIView {
     
       lazy var dontHaveAccountButton = CustomView().attributedButton(fristPart: LoginViewText.attributedTitleText, secondPart: LoginViewText.signupText).then{ button in
     }
+    
+    lazy var appleLoginButton = ASAuthorizationAppleIDButton(authorizationButtonType: .signIn, authorizationButtonStyle: .whiteOutline).then{button in
+        button.setHeight(40)
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 5
+    }
+    
+    private lazy var stackView = UIStackView(arrangedSubviews: [emailContainerView, passwordContainerView, loginButton, appleLoginButton]).then{ stack in
+        stack.axis = .vertical
+        stack.spacing = 20
+        stack.distribution = .fillEqually
+    }
+    
     
     //MARK: - LifeCycle
     override init(frame: CGRect) {
