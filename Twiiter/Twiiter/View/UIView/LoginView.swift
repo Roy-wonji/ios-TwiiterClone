@@ -24,11 +24,11 @@ final class LoginView: UIView {
         
     }
     
-    private lazy var emailTextField = CustomView().textField(withPlaceholder: LoginViewText.emailTextFieldText).then{ textField in
+    lazy var emailTextField = CustomView().textField(withPlaceholder: LoginViewText.emailTextFieldText).then{ textField in
         
     }
     
-    private lazy var passwordTextField = CustomView().textField(withPlaceholder: LoginViewText.passwordTextFieldText).then{ textField in
+     lazy var passwordTextField = CustomView().textField(withPlaceholder: LoginViewText.passwordTextFieldText).then{ textField in
         textField.isSecureTextEntry = true
     }
     

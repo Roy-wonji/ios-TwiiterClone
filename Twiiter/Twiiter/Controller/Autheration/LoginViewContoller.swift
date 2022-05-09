@@ -50,6 +50,15 @@ final class LoginViewContoller: UIViewController {
     }
     
     @objc func handleLogin() {
-        print("DEBUG: LoginButton Tapped")
+        guard let email = loginView.emailTextField.text else  { return }
+        guard let password = loginView.passwordTextField.text else  { return }
+        
+        AuthService.logUseIn(withEmail: email, password: password) { (result, error) in
+            if let error = error {
+                print("DEBUG: Falied to log user in  \(error.localizedDescription)")
+                return
+            }
+            self.dismiss(animated: true, completion: nil)
+        }
     }
 }

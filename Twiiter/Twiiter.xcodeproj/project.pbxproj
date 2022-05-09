@@ -10,6 +10,10 @@
 		7F06065B28293D1200E0744A /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F06065A28293D1200E0744A /* RegisterView.swift */; };
 		7F06065D282940CA00E0744A /* RegisterViewText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F06065C282940CA00E0744A /* RegisterViewText.swift */; };
 		7F0606642829597700E0744A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7F0606632829597700E0744A /* GoogleService-Info.plist */; };
+		7F060667282964A000E0744A /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F060666282964A000E0744A /* ImageUploader.swift */; };
+		7F0606692829683100E0744A /* AuthCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0606682829683100E0744A /* AuthCredentials.swift */; };
+		7F06066B282968A100E0744A /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F06066A282968A100E0744A /* AuthService.swift */; };
+		7F06066D282976F900E0744A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F06066C282976F900E0744A /* Constants.swift */; };
 		7F14C6E62828A5EB00C4A1A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F14C6E52828A5EB00C4A1A7 /* AppDelegate.swift */; };
 		7F14C6E82828A5EB00C4A1A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F14C6E72828A5EB00C4A1A7 /* SceneDelegate.swift */; };
 		7F14C6ED2828A5EB00C4A1A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F14C6EB2828A5EB00C4A1A7 /* Main.storyboard */; };
@@ -35,6 +39,10 @@
 		7F06065A28293D1200E0744A /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		7F06065C282940CA00E0744A /* RegisterViewText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewText.swift; sourceTree = "<group>"; };
 		7F0606632829597700E0744A /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		7F060666282964A000E0744A /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
+		7F0606682829683100E0744A /* AuthCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCredentials.swift; sourceTree = "<group>"; };
+		7F06066A282968A100E0744A /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		7F06066C282976F900E0744A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7F14C6E22828A5EB00C4A1A7 /* Twiiter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twiiter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F14C6E52828A5EB00C4A1A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F14C6E72828A5EB00C4A1A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +84,17 @@
 				BF6A12CE2DA26D9573239C74 /* Pods_Twiiter.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7F0606652829649400E0744A /* API */ = {
+			isa = PBXGroup;
+			children = (
+				7F060666282964A000E0744A /* ImageUploader.swift */,
+				7F0606682829683100E0744A /* AuthCredentials.swift */,
+				7F06066A282968A100E0744A /* AuthService.swift */,
+				7F06066C282976F900E0744A /* Constants.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		7F14C6D92828A5EB00C4A1A7 = {
@@ -160,6 +179,7 @@
 		7F14C6FE2828A62900C4A1A7 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				7F0606652829649400E0744A /* API */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -347,9 +367,11 @@
 			files = (
 				7F14C6E62828A5EB00C4A1A7 /* AppDelegate.swift in Sources */,
 				7F14C712282903F700C4A1A7 /* LoginViewContoller.swift in Sources */,
+				7F060667282964A000E0744A /* ImageUploader.swift in Sources */,
 				7F14C7092828B0FA00C4A1A7 /* ConversationsController.swift in Sources */,
 				7F14C71C28291AF600C4A1A7 /* LoginViewText.swift in Sources */,
 				7F14C7032828B01700C4A1A7 /* FeedController.swift in Sources */,
+				7F06066B282968A100E0744A /* AuthService.swift in Sources */,
 				7F14C7072828B0E200C4A1A7 /* NotificationController.swift in Sources */,
 				7F06065D282940CA00E0744A /* RegisterViewText.swift in Sources */,
 				7F06065B28293D1200E0744A /* RegisterView.swift in Sources */,
@@ -358,8 +380,10 @@
 				7F14C7012828ADDC00C4A1A7 /* MainTabController.swift in Sources */,
 				7F14C6E82828A5EB00C4A1A7 /* SceneDelegate.swift in Sources */,
 				7F14C70F2828F05800C4A1A7 /* Extensions + viewAutolayout.swift in Sources */,
+				7F06066D282976F900E0744A /* Constants.swift in Sources */,
 				7F14C7052828B0C100C4A1A7 /* ExploreController.swift in Sources */,
 				7F14C7142829040D00C4A1A7 /* RegisterViewController.swift in Sources */,
+				7F0606692829683100E0744A /* AuthCredentials.swift in Sources */,
 				7F14C719282916A100C4A1A7 /* CustomView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

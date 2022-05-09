@@ -13,6 +13,8 @@ final class RegisterViewController: UIViewController {
     
     private let registerView = RegisterView()
     private let imagePicker  = UIImagePickerController()
+    private var profileImage: UIImage?
+    
     //MARK:  - lifeCycle
     
     override func loadView() {
@@ -55,15 +57,21 @@ final class RegisterViewController: UIViewController {
     }
     
     @objc func handleRegistrantion() {
+        guard let profileImage = profileImage else { return }
         guard let email = registerView.emailTextField.text  else  { return }
         guard let password = registerView.passwordTextField.text else { return }
+        guard let fullname = registerView.fullnameTextField.text else { return }
+        guard let username = registerView.usernameTextField.text else { return }
         
-        Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+    let credentials = AuthCredentials(email: email, password: password, fullname: fullname, username: username, profileImage: profileImage)
+            
+        AuthService.registerUser(withCredential: credentials) { error in
             if let error = error {
-                print("DEBUG: Error is \(error.localizedDescription)")
+                print("DEBUG: Falied to register user \(error.localizedDescription)")
                 return
             }
-            print("DEBUG: Sucessfully registered user..")
+            print("DEBUG:Sucessfully registered user with firestore...")
+            self.dismiss(animated: true, completion: nil)
         }
     }
     
@@ -75,6 +83,8 @@ final class RegisterViewController: UIViewController {
 extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let profileImage = info[.editedImage] as? UIImage else { return }
+        self.profileImage = profileImage
+        
         registerView.plusPhotoButton.layer.cornerRadius = 128 / 2
         registerView.plusPhotoButton.layer.masksToBounds = true
         registerView.plusPhotoButton.imageView?.contentMode = .scaleAspectFill
