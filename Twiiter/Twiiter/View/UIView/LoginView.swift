@@ -29,12 +29,12 @@ final class LoginView: UIView {
         
     }
     
-     lazy var passwordTextField = CustomView().textField(withPlaceholder: LoginViewText.passwordTextFieldText).then{ textField in
+    lazy var passwordTextField = CustomView().textField(withPlaceholder: LoginViewText.passwordTextFieldText).then{ textField in
         textField.isSecureTextEntry = true
     }
     
     
-     lazy var loginButton = UIButton(type: .system).then{ button in
+    lazy var loginButton = UIButton(type: .system).then{ button in
         button.setTitle(LoginViewText.loginButtonText, for: .normal)
         button.setTitleColor(.twitterBlue, for: .normal)
         button.backgroundColor = .white
@@ -44,7 +44,7 @@ final class LoginView: UIView {
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
     }
     
-      lazy var dontHaveAccountButton = CustomView().attributedButton(fristPart: LoginViewText.attributedTitleText, secondPart: LoginViewText.signupText).then{ button in
+    lazy var dontHaveAccountButton = CustomView().attributedButton(fristPart: LoginViewText.attributedTitleText, secondPart: LoginViewText.signupText).then{ button in
     }
     
     lazy var appleLoginButton = ASAuthorizationAppleIDButton(authorizationButtonType: .signIn, authorizationButtonStyle: .whiteOutline).then{button in
