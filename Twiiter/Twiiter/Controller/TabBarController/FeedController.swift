@@ -26,7 +26,7 @@ final class FeedController: UIViewController {
         setNavigaionBarImage()
     }
     //MARK: - UI바에 이미지 설정
-   private func setNavigaionBarImage() {
+    private func setNavigaionBarImage() {
         let imageVIew = UIImageView(image: UIImage(named: "twitter_logo_blue"))
         imageVIew.contentMode = .scaleAspectFit
         navigationItem.titleView = imageVIew
