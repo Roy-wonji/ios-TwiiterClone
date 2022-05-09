@@ -18,6 +18,7 @@
 		7F14C7072828B0E200C4A1A7 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F14C7062828B0E200C4A1A7 /* NotificationController.swift */; };
 		7F14C7092828B0FA00C4A1A7 /* ConversationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F14C7082828B0FA00C4A1A7 /* ConversationsController.swift */; };
 		7F14C70C2828C2AD00C4A1A7 /* NavigationText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F14C70B2828C2AD00C4A1A7 /* NavigationText.swift */; };
+		7F14C70F2828F05800C4A1A7 /* Extensions + viewAutolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F14C70E2828F05800C4A1A7 /* Extensions + viewAutolayout.swift */; };
 		D2E3F16746B26D5C0C26F13A /* Pods_Twiiter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF6A12CE2DA26D9573239C74 /* Pods_Twiiter.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		7F14C7062828B0E200C4A1A7 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		7F14C7082828B0FA00C4A1A7 /* ConversationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsController.swift; sourceTree = "<group>"; };
 		7F14C70B2828C2AD00C4A1A7 /* NavigationText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationText.swift; sourceTree = "<group>"; };
+		7F14C70E2828F05800C4A1A7 /* Extensions + viewAutolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions + viewAutolayout.swift"; sourceTree = "<group>"; };
 		AD57A811DAC0A1EDBC3C77CB /* Pods-Twiiter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twiiter.release.xcconfig"; path = "Target Support Files/Pods-Twiiter/Pods-Twiiter.release.xcconfig"; sourceTree = "<group>"; };
 		BF6A12CE2DA26D9573239C74 /* Pods_Twiiter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Twiiter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -95,6 +97,7 @@
 		7F14C6F92828A5FA00C4A1A7 /* Utills */ = {
 			isa = PBXGroup;
 			children = (
+				7F14C70D2828F04400C4A1A7 /* Extension */,
 				7F14C6E52828A5EB00C4A1A7 /* AppDelegate.swift */,
 				7F14C6E72828A5EB00C4A1A7 /* SceneDelegate.swift */,
 			);
@@ -159,6 +162,14 @@
 				7F14C70B2828C2AD00C4A1A7 /* NavigationText.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		7F14C70D2828F04400C4A1A7 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7F14C70E2828F05800C4A1A7 /* Extensions + viewAutolayout.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		FA6328232E55AAD7011D0C8B /* Pods */ = {
@@ -292,6 +303,7 @@
 				7F14C70C2828C2AD00C4A1A7 /* NavigationText.swift in Sources */,
 				7F14C7012828ADDC00C4A1A7 /* MainTabController.swift in Sources */,
 				7F14C6E82828A5EB00C4A1A7 /* SceneDelegate.swift in Sources */,
+				7F14C70F2828F05800C4A1A7 /* Extensions + viewAutolayout.swift in Sources */,
 				7F14C7052828B0C100C4A1A7 /* ExploreController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
