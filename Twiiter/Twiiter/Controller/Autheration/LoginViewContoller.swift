@@ -12,7 +12,7 @@ final class LoginViewContoller: UIViewController {
     
     private let loginView = LoginView()
     override func loadView() {
-         view = loginView
+        view = loginView
     }
     
     //MARK:  - LifeCycle
@@ -24,11 +24,11 @@ final class LoginViewContoller: UIViewController {
     //MARK: - Selectors
     
     //MARK:  - UI 관련
-   private func updateUI() {
+    private func updateUI() {
         view.backgroundColor = .twitterBlue
-       navigationController?.navigationBar.barStyle = .black
-       navigationController?.navigationBar.isHidden = true
-       self.overrideUserInterfaceStyle = .light
+        navigationController?.navigationBar.barStyle = .black
+        navigationController?.navigationBar.isHidden = true
+        self.overrideUserInterfaceStyle = .light
     }
     
     private func configureUI() {

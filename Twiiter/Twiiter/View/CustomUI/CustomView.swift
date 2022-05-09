@@ -33,10 +33,21 @@ class CustomView {
     
     func textField(withPlaceholder placeholder: String) -> UITextField {
         let textField = UITextField()
-         textField.placeholder = placeholder
-         textField.textColor = .white
-         textField.font = UIFont.systemFont(ofSize: 16)
-         textField.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [ NSAttributedString.Key.foregroundColor:  UIColor.white])
+        textField.placeholder = placeholder
+        textField.textColor = .white
+        textField.font = UIFont.systemFont(ofSize: 16)
+        textField.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [ NSAttributedString.Key.foregroundColor:  UIColor.white])
         return textField
+    }
+    
+    func attributedButton(fristPart: String, secondPart: String) -> UIButton {
+        let button = UIButton(type: .system)
+        
+        let attributedTitle = NSMutableAttributedString(string: fristPart, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16), NSAttributedString.Key.foregroundColor : UIColor.white])
+        
+        attributedTitle.append(NSAttributedString(string: secondPart, attributes: [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.white]))
+        
+        button.setAttributedTitle(attributedTitle, for: .normal)
+        return button
     }
 }

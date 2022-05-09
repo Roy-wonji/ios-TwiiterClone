@@ -10,4 +10,7 @@ import Foundation
 enum LoginViewText {
     static let emailTextFieldText: String = "Email"
     static let passwordTextFieldText: String = "Password"
+    static let loginButtonText: String = "Log In"
+    static let attributedTitleText: String = "Don't have an account? "
+    static let signupText: String = " Sign UP"
 }

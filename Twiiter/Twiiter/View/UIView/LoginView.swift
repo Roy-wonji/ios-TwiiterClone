@@ -17,11 +17,11 @@ final class LoginView: UIView {
     }
     
     private lazy var emailContainerView = CustomView().inputContainerView(withImage: UIImage(named: "mail2"), textField: emailTextField).then { uiView in
-       
+        
     }
     
     private lazy var passwordContainerView = CustomView().inputContainerView(withImage: UIImage(named: "lock"), textField: passwordTextField).then { uiView in
-      
+        
     }
     
     private lazy var emailTextField = CustomView().textField(withPlaceholder: LoginViewText.emailTextFieldText).then{ textField in
@@ -32,9 +32,25 @@ final class LoginView: UIView {
         textField.isSecureTextEntry = true
     }
     
-    private lazy var containerStackView = UIStackView(arrangedSubviews: [emailContainerView, passwordContainerView]).then{ stack in
+    private lazy var stackView = UIStackView(arrangedSubviews: [emailContainerView, passwordContainerView, loginButton]).then{ stack in
         stack.axis = .vertical
-        stack.spacing = 8
+        stack.spacing = 20
+        stack.distribution = .fillEqually
+    }
+    
+    private lazy var loginButton = UIButton(type: .system).then{ button in
+        button.setTitle(LoginViewText.loginButtonText, for: .normal)
+        button.setTitleColor(.twitterBlue, for: .normal)
+        button.backgroundColor = .white
+        button.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 10
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        button.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
+    }
+    
+    private  lazy var dontHaveAccountButton = CustomView().attributedButton(fristPart: LoginViewText.attributedTitleText, secondPart: LoginViewText.signupText).then{ button in
+        button.addTarget(self, action: #selector(handleShowSignUp), for: .touchUpInside)
     }
     
     //MARK: - LifeCycle
@@ -50,14 +66,23 @@ final class LoginView: UIView {
     
     private func updateView() {
         self.addSubview(logoImageView)
-        self.addSubview(containerStackView)
+        self.addSubview(stackView)
+        self.addSubview(dontHaveAccountButton)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    //MARK: - Selectors
+    @objc func handleLogin() {
+        print("DEBUG: LoginButton Tapped")
+    }
+    
+    @objc func handleShowSignUp() {
+        print("DEBUG: SignUP button tapped here...")
+    }
     //MARK: - Layout 관련
-
     override func updateConstraints() {
         setConstraints()
         super.updateConstraints()
@@ -66,6 +91,7 @@ final class LoginView: UIView {
     private func setConstraints() {
         setConstraintsLogoImageView()
         setConstraintsStackView()
+        setConstraintsDontHaveAccountButton()
     }
     
     private func setConstraintsLogoImageView() {
@@ -74,7 +100,11 @@ final class LoginView: UIView {
     }
     
     private func setConstraintsStackView() {
-        containerStackView.anchor(top: logoImageView.bottomAnchor, left: self.leftAnchor,
-                                  right: self.rightAnchor, paddingLeft: 16, paddingRight: 16)
+        stackView.anchor(top: logoImageView.bottomAnchor, left: self.leftAnchor,
+                         right: self.rightAnchor, paddingLeft: 32, paddingRight: 32)
+    }
+    
+    private func setConstraintsDontHaveAccountButton() {
+        dontHaveAccountButton.anchor(left: self.leftAnchor, bottom: self.safeAreaLayoutGuide.bottomAnchor, right: self.rightAnchor, paddingLeft: 40,  paddingRight: 40)
     }
 }
