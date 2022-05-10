@@ -32,6 +32,8 @@ final class FeedController: UIViewController {
             title:  "logout", style: .plain,
             target: self, action: #selector(handleLogOut))
         navigationItem.title = "Feed"
+        tabBarController?.tabBar.barTintColor = .backgroundColor
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.defaultLabelColor]
     }
     
     //MARK: - Actions

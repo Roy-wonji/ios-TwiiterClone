@@ -12,7 +12,7 @@ import Firebase
 final class MainTabController: UITabBarController {
     //MARK: - Properties
     lazy var actionButton = UIButton(type: .system).then { button in
-        button.tintColor = .white
+        button.tintColor = .backgroundColorAsset
         button.backgroundColor = .twitterBlue
         button.setImage(UIImage(named: "new_tweet"), for: .normal)
         button.clipsToBounds = true
@@ -50,10 +50,10 @@ final class MainTabController: UITabBarController {
         let conversations = tempateNavigationController(unselectedImage: UIImage(named: "mail_unselected"), selectedImage: UIImage(named: "mail_selected"),  rootViewController: ConversationsController())
         
         viewControllers = [feed, explore, notifications, conversations]
-        tabBar.tintColor = .black
-        tabBar.backgroundColor = .white
-        tabBar.barTintColor = .purple
-        self.overrideUserInterfaceStyle =  .light
+        tabBar.tintColor = .tabBarColorAsset
+        tabBar.backgroundColor = .backgroundColor
+        tabBar.barTintColor = .defaultLabelColor
+        view.backgroundColor = .backgroundColor
     }
     //MARK: - tabbar 의 이미지가 선택 되었을때랑 안선택 되었을때 이미지 선택 해주는 함수
     func tempateNavigationController(unselectedImage: UIImage?, selectedImage: UIImage?, rootViewController: UIViewController) -> UINavigationController {

@@ -120,3 +120,36 @@ extension UIViewController {
         gradient.frame = view.frame
     }
 }
+
+extension UIColor {
+    static let backgroundColorAsset = UIColor(named: "backgroundColorAsset")
+   static let textColorAsset = UIColor(named: "textColorAsset")
+    static let tabBarColorAsset = UIColor(named: "tabBarColorAsset")
+}
+
+extension UIColor {
+    static var defaultLabelColor: UIColor {
+            if #available(iOS 13, *) {
+                return UIColor { (traitCollection: UITraitCollection) -> UIColor in
+    // ✅ UITraitCollection 의 userInterfaceStyle : 라이트인지 다크인지 알려준다.
+                    if traitCollection.userInterfaceStyle == .light {
+                        return .black
+                    } else {
+                        return .black
+                    }
+                }
+            } else {
+                return .black
+            }
+        }
+}
+
+extension UIColor {
+    static var backgroundColor: UIColor {
+            if #available(iOS 13.0, *) {
+                return .systemBackground
+            } else {
+                return .white
+            }
+        }
+}
