@@ -12,7 +12,6 @@ final class RegisterViewController: UIViewController {
     //MARK:  - Properties
     
     private let registerView = RegisterView()
-    private let imagePicker  = UIImagePickerController()
     private var profileImage: UIImage?
     
     //MARK:  - lifeCycle
@@ -34,38 +33,33 @@ final class RegisterViewController: UIViewController {
     
     private func configureUI() {
         addTarget()
-        imagePickerDelegate()
     }
     
     private func addTarget() {
-        DispatchQueue.main.async {
-            self.registerView.plusPhotoButton.addTarget(self, action: #selector(self.handleAddProfilePhoto), for: .touchUpInside)
-            self.registerView.signUpButton.addTarget(self, action: #selector(self.handleRegistrantion), for: .touchUpInside)
-            self.registerView.alreadyHaveAccountButton.addTarget(self, action: #selector(self.handleShowLogin), for: .touchUpInside)
+//        DispatchQueue.main.async {
+            registerView.plusPhotoButton.addTarget(self, action: #selector(handleAddProfilePhoto), for: .touchUpInside)
+            registerView.signUpButton.addTarget(self, action: #selector(handleRegistrantion), for: .touchUpInside)
+            registerView.alreadyHaveAccountButton.addTarget(self, action: #selector(handleShowLogin), for: .touchUpInside)
         }
-    }
-    
-    private func imagePickerDelegate() {
-        DispatchQueue.main.async {
-            self.imagePicker.delegate = self
-            self.imagePicker.allowsEditing = true
-        }
-    }
+//    }
     //MARK: - Selectors
     @objc func handleAddProfilePhoto() {
-        present(imagePicker, animated: true, completion:  nil)
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = true
+        present(picker, animated: true, completion:  nil)
     }
     
     @objc func handleRegistrantion() {
+        guard let email = registerView.emailTextField.text else  { return }
+        guard let password = registerView.passwordTextField.text else  { return }
+        guard let fullname = registerView.fullnameTextField.text else  { return }
+        guard let username = registerView.usernameTextField.text?.lowercased() else  { return }
         guard let profileImage = profileImage else { return }
-        guard let email = registerView.emailTextField.text  else  { return }
-        guard let password = registerView.passwordTextField.text else { return }
-        guard let fullname = registerView.fullnameTextField.text else { return }
-        guard let username = registerView.usernameTextField.text else { return }
+
+        let crendentials = AuthCredentials(email: email, password: password, fullname: fullname, username: username, profileImage: profileImage )
         
-    let credentials = AuthCredentials(email: email, password: password, fullname: fullname, username: username, profileImage: profileImage)
-            
-        AuthService.registerUser(withCredential: credentials) { error in
+        AuthService.registerUser(withCredential: crendentials) { error in
             if let error = error {
                 print("DEBUG: Falied to register user \(error.localizedDescription)")
                 return
@@ -82,8 +76,8 @@ final class RegisterViewController: UIViewController {
 //MARK: - UIImagePickerControllerDelegate, UINavigationControllerDelegate 설정
 extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        guard let profileImage = info[.editedImage] as? UIImage else { return }
-        self.profileImage = profileImage
+        guard let selectedImage = info[.editedImage] as? UIImage else { return }
+        profileImage = selectedImage
         
         registerView.plusPhotoButton.layer.cornerRadius = 128 / 2
         registerView.plusPhotoButton.layer.masksToBounds = true
@@ -91,7 +85,7 @@ extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationC
         registerView.plusPhotoButton.imageView?.clipsToBounds = true
         registerView.plusPhotoButton.layer.borderColor = UIColor.white.cgColor
         registerView.plusPhotoButton.layer.borderWidth = 3
-        self.registerView.plusPhotoButton.setImage(profileImage.withRenderingMode(.alwaysOriginal), for: .normal)
+        self.registerView.plusPhotoButton.setImage(selectedImage.withRenderingMode(.alwaysOriginal), for: .normal)
         dismiss(animated: true, completion: nil)
     }
 }

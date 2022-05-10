@@ -76,7 +76,16 @@ final class RegisterView: UIView {
     private func configureUI() {
         updateView()
         updateConstraints()
+        updateTextFieldDelegate()
     }
+    
+    private func updateTextFieldDelegate() {
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        fullnameTextField.delegate = self
+        usernameTextField.delegate = self
+    }
+    
     
     private func updateView() {
         self.addSubview(plusPhotoButton)
@@ -111,5 +120,14 @@ final class RegisterView: UIView {
     
     private func setConstraintsAlreadyHaveAccountButton() {
         alreadyHaveAccountButton.anchor(left: self.leftAnchor, bottom: self.safeAreaLayoutGuide.bottomAnchor, right: self.rightAnchor, paddingLeft: 40,  paddingRight: 40)
+    }
+}
+
+extension RegisterView: UITextFieldDelegate {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        emailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+        fullnameTextField.resignFirstResponder()
+        usernameTextField.resignFirstResponder()
     }
 }

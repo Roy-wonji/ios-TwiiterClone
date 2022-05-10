@@ -27,7 +27,7 @@ final class MainTabController: UITabBarController {
     }
     
     //MARK: - API
-    func checkIfUserIsLoggedIn() {
+   private func checkIfUserIsLoggedIn() {
         if Auth.auth().currentUser ==  nil  {
             DispatchQueue.main.async {
                 let controller = LoginViewContoller()

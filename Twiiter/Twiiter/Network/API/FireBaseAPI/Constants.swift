@@ -7,8 +7,10 @@
 
 import Firebase
 
+
 struct Constants{
     static let DB_REF = Firestore.firestore()
     static let REF_USERS =  DB_REF.collection("users")
+    static let COLLECTION_USERS =  Firestore.firestore().collection("users")
 }
 

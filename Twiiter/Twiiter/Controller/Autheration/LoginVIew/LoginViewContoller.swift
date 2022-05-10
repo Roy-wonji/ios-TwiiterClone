@@ -90,7 +90,7 @@ final class LoginViewContoller: UIViewController {
         
         return request
     }
-    @available(iOS 13, *) // - 5️⃣
+    @available(iOS 13, *)
     private func sha256(_ input: String) -> String {
         let inputData = Data(input.utf8)
         let hashedData = hashSHA256(data: inputData)
@@ -141,11 +141,9 @@ extension LoginViewContoller: ASAuthorizationControllerDelegate {
                 return
             }
             
-            
             let credential = OAuthProvider.credential(withProviderID: "apple.com",
                                                       idToken: idTokenString,
                                                       rawNonce: nonce)
-            
             
             FirebaseAuth.Auth.auth().signIn(with: credential) { (authDataResult, error) in
                 // 인증 결과에서 Firebase 사용자를 검색하고 사용자 정보를 표시할 수 있다.

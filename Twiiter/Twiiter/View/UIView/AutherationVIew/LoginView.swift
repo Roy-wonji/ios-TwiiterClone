@@ -69,6 +69,8 @@ final class LoginView: UIView {
     private func configureUI() {
         updateView()
         updateConstraints()
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
     }
     
     private func updateView() {
@@ -105,5 +107,12 @@ final class LoginView: UIView {
     
     private func setConstraintsDontHaveAccountButton() {
         dontHaveAccountButton.anchor(left: self.leftAnchor, bottom: self.safeAreaLayoutGuide.bottomAnchor, right: self.rightAnchor, paddingLeft: 40,  paddingRight: 40)
+    }
+}
+
+extension LoginView : UITextFieldDelegate {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        emailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
     }
 }

@@ -9,7 +9,7 @@ import Foundation
 import Firebase
 
 struct AuthService {
-    static func logUseIn(withEmail email: String, password: String, completion: @escaping(AuthDataResult?, Error?) -> Void) {
+    static func logUseIn(withEmail email: String, password: String, completion:   @escaping(AuthDataResult?, Error?) -> Void) {
         Auth.auth().signIn(withEmail: email, password: password, completion: completion)
     }
     
@@ -26,10 +26,10 @@ struct AuthService {
                 
                 let data: [String: Any] = ["email": credentials.email,
                                            "fullname": credentials.fullname ,
-                                           "profileImageUrl": imageUrl,
+                                           "profileImageurl": imageUrl,
                                            "uid": uid,
                                            "username": credentials.username]
-                Constants.DB_REF.document(uid).setData(data, completion: completion)
+                    Constants.COLLECTION_USERS.document(uid).setData(data, completion: completion)
             }
         }
     }

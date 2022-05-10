@@ -6,16 +6,16 @@ target 'Twiiter' do
   use_frameworks!
 
   # Pods for Twiiter
-pod 'SnapKit', '~> 5.0.0'
-pod 'Then'
-pod 'Firebase/Core'
-pod 'Firebase/Database'
-pod 'Firebase/Firestore'
-pod 'Firebase/Storage'
-pod 'Firebase/Messaging'
-pod 'Firebase/Auth'
-pod 'ActiveLabel'
-pod 'SDWebImage', '~> 4.4.2'
-pod 'JGProgressHUD', '~> 2.0.3'
-pod 'YPImagePicker'
+  pod 'SnapKit', '~> 5.0.0'
+  pod 'Then'
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Storage'
+  pod 'Firebase/Messaging'
+  pod 'Firebase/Auth'
+  pod 'ActiveLabel'
+  pod 'SDWebImage', '~> 4.4.2'
+  pod 'JGProgressHUD', '~> 2.0.3'
+  pod 'YPImagePicker'
 end
