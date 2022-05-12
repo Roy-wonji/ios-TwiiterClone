@@ -11,6 +11,19 @@ import Firebase
 
 final class MainTabController: UITabBarController {
     //MARK: - Properties
+     var user : User? {
+        didSet {
+            guard let user = user else { return }
+            configureViewControllers(withUser: user)
+        
+//            guard let nav =  viewControllers?.first as? UINavigationController else {return}
+//            guard let feed = nav.viewControllers.first  as? FeedController else {return}
+//            feed.user = user
+//            guard let user = user else { return }
+//            configureViewControllers(withUser: user)
+        }
+    }
+    
     lazy var actionButton = UIButton(type: .system).then { button in
         button.tintColor = .backgroundColorAsset
         button.backgroundColor = .twitterBlue
@@ -21,12 +34,21 @@ final class MainTabController: UITabBarController {
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureViewControllers()
-        updateUI()
+        configureUI()
+        fetchUser()
         checkIfUserIsLoggedIn()
+//      fetchUser()
+        
     }
     
     //MARK: - API
+   private func fetchUser() {
+       UserService.fetchUser{ user in
+           self.user = user
+       }
+    }
+    
+    
    private func checkIfUserIsLoggedIn() {
         if Auth.auth().currentUser ==  nil  {
             DispatchQueue.main.async {
@@ -43,7 +65,7 @@ final class MainTabController: UITabBarController {
         print("DEBUG: actionbutton tapped ...")
     }
     //MARK:  - UI관련
-    private func configureViewControllers() {
+    private func configureViewControllers( withUser user: User) {
         let feed = tempateNavigationController(unselectedImage: UIImage(named: "home_unselected"), selectedImage: UIImage(named: "home_selected"),  rootViewController: FeedController())
         let explore = tempateNavigationController(unselectedImage: UIImage(named: "search_unselected"), selectedImage: UIImage(named: "search_selected"),  rootViewController: ExploreController())
         let notifications = tempateNavigationController(unselectedImage: UIImage(named: "like_unselected"), selectedImage: UIImage(named: "like_selected"), rootViewController: NotificationController())

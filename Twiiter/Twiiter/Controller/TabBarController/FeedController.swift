@@ -7,14 +7,21 @@
 
 import UIKit
 import Firebase
+import SDWebImage
 
 final class FeedController: UIViewController {
     //MARK: - Properties
+    var viewModel:  ProfileHeaderViewModel?   {
+        didSet{ naviagationTabBar()
+            
+        }
+    }
     
     //MARK:  - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
+        
     }
     //MARK: - UI관련
     private  func updateUI() {
@@ -22,18 +29,18 @@ final class FeedController: UIViewController {
     }
     
     private func configureUI() {
-        view.backgroundColor = .white
+        view.backgroundColor = .backgroundColor
         setNavigaionBarImage()
         naviagationTabBar()
     }
     
     func naviagationTabBar() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(
-            title:  "logout", style: .plain,
+            title: "logout", style: .plain,
             target: self, action: #selector(handleLogOut))
         navigationItem.title = "Feed"
-        tabBarController?.tabBar.barTintColor = .backgroundColor
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.defaultLabelColor]
+                tabBarController?.tabBar.barTintColor = .textColorAsset
+                UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.defaultLabelColor]
     }
     
     //MARK: - Actions

@@ -22,12 +22,14 @@ final class ExploreController: UIViewController {
     }
     
     private func configureUI() {
-        view.backgroundColor = .white
+        view.backgroundColor = .backgroundColor
         setNavigaionBar()
         
     }
     //MARK: - UI바 설정 관련
     private func setNavigaionBar() {
         navigationItem.title = NavigationText.exploreNavigationText
+        tabBarController?.tabBar.barTintColor = .textColorAsset
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.textColorAsset]
     }
 }
